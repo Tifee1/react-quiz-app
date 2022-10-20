@@ -27,7 +27,6 @@ export const ContextProvider = ({ children }) => {
     const resp = await axios(url)
     const data = await resp.data.results
     if (data.length > 1) {
-      console.log(resp.data)
       const newData = data.map((item) => {
         return {
           quest: item.question,
